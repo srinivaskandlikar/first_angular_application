@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+<ul ng-repeat="x in names |orderBy:lname"><li>{{
+'firstname is :'+x.fname +'
+&'+'lastname is:'+x.lname}}</li></ul>
+</div>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('namesCtrl',function($scope){
+$scope.names=[
+{fname:'aaa',lname:'aaaa'},
+{fname:'srinivas',lname:'kandlikar'},
+{fname:'kandlikar',lname:'srinivas'},
+{fname:'raveena',lname:'zvarla'}
+];
+});
+</script>
+</body>
+</html>
